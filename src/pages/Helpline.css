@@ -1,0 +1,141 @@
+/* Base styles (as you already have) */
+.helpline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background-color: #f9fafb00;
+}
+
+.helpline-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.helpline-logo {
+  height: 200px;
+  object-fit: contain;
+}
+
+.helpline-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.helpline-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f2937;
+}
+
+.helpline-header p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.helpline-header span {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.helpline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #c19d3c;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.radio-group label {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #c19d3c;
+  color: white;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #a8872c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .helpline-container {
+    padding: 2rem 1rem;
+  }
+
+  .helpline-card {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .helpline-logo {
+    height: 150px;
+  }
+
+  .helpline-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .helpline-header p,
+  .helpline-header span,
+  .radio-group label,
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 0.65rem;
+  }
+}
