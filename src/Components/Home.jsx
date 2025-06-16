@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { FaBullhorn } from 'react-icons/fa';
-import { FaChevronDown, FaChevronUp ,FaMapMarkedAlt} from 'react-icons/fa'; // for FAQ toggles
+import { FaChevronDown, FaChevronUp ,FaMapMarkedAlt,FaPhoneAlt} from 'react-icons/fa'; // for FAQ toggles
 
 const faqs = [
   {
@@ -59,7 +59,7 @@ const Home = () => {
       <div className="hero-background">
   <div className="image-container">
     <img
-      src="/ratlamrelay2.svg"
+      src="/rtmrelaycenter.svg"
       alt="Ashara 1447H"
       className="centered-image"
     />
@@ -84,6 +84,15 @@ const Home = () => {
     </div>
     <p>Find your allocated relay zone and center for Waaz Talaqqi.</p>
     <a href="/zones" className="card-button">View Relay Zones</a>
+  </div>
+
+  <div className="info-card">
+    <div className="card-header">
+      <FaPhoneAlt className="card-icon" />
+      <h3>Helpline </h3>
+    </div>
+    <p>Any Queries?? Just Visit Here</p>
+    <a href="/helpline" className="card-button"> Visit Helpline </a>
   </div>
 </section>
 

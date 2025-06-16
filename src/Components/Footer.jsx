@@ -44,9 +44,9 @@ const Footer = () => {
 
         <div className="footer-column">
           <h3>Contact Us</h3>
-          <p>Email: <a href="mailto:help@ashararelaycenter.website" className="email-link">help@ashararelaycenter.website</a></p>
-          <p>Phone: +91 8959706169</p>
-          <p>Address: Burhani Guards Office, Ratlam, MP</p>
+          <p>Email: <a href="mailto:helplinedeskratlam@gmail.com" className="email-link">helplinedeskratlam@gmail.com</a></p>
+          <p>Phone: +91 9243206802</p>
+          <p>Address: Ratlam, MP</p>
         </div>
 
         <div className="footer-column">
@@ -56,8 +56,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Burhani Guards Ratlam. All rights reserved.</p>
-        <p>Developed & Designed By : Murtaza Dawoodji & Aziz Kharwawala</p>
+        <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
       </div>
     </footer>
   );
