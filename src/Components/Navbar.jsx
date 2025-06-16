@@ -8,8 +8,8 @@ import {
   FaInfoCircle,
   FaBars,
   FaTimes,
-  FaCarSide ,
-  FaTaxi
+  FaTaxi,
+  FaPhoneAlt // ✅ New import
 } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="logo-container">
           <NavLink to="/" className="pill-logo2">
-            <img src="/relay.svg" alt="relay Logo" />
+            <img src="/ratlamrelayoff.svg" alt="relay Logo" />
           </NavLink>
 
           {/* Hamburger icon (mobile only) */}
@@ -49,7 +49,10 @@ const Navbar = () => {
             <FaInfoCircle /> General Guidelines
           </NavLink>
           <NavLink to="/travelguide" className="menu-item" onClick={() => setMenuOpen(false)}>
-            <FaTaxi/> Transport Guidelines
+            <FaTaxi /> Transport Guidelines
+          </NavLink>
+          <NavLink to="/helpline" className="menu-item" onClick={() => setMenuOpen(false)}>
+            <FaPhoneAlt /> Helpline
           </NavLink>
         </div>
       </nav>

@@ -69,7 +69,7 @@
     background-image: url('/masjidbg.jpg'); /* ✅ Make sure this path is correct */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -130px; /* ✅ Anchors top, so it crops bottom */
+    background-position: center -150px; /* ✅ Anchors top, so it crops bottom */
     position: relative;
     margin-top: 80px; /* ✅ Pushes it below the navbar (adjust if your navbar is taller) */
     z-index: 1;
@@ -95,12 +95,20 @@
 
   .centered-image {
     max-width: 700px;
-    width: 100%;
+    width: 400px;
     height: auto;
     z-index: 3;
     position: relative;
     margin-top: 30px;
   }
+  @media (max-width: 768px) {
+  .centered-image {
+    width: 70%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-background {
     height: 300px; /* smaller height for small devices */
@@ -277,26 +285,34 @@
     background-color: #fff5e6;
     border-color: #c19d3c;
   }
+  
   .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    max-width: 1000px;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch; /* 🔥 Ensures cards match height */
+  margin: 3rem auto;
+  padding: 0 2rem;
+  max-width: 1000px;
+}
 
-  .info-card {
-    background-color: #ffffff;
-    border-radius: 1.2rem;
-    padding: 2rem;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    flex: 1 1 350px;
-    max-width: 400px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+
+
+ .info-card {
+  background-color: #ffffff;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
+  display: flex;              /* 👇 */
+  flex-direction: column;     /* 👇 */
+  justify-content: space-between; /* 🔥 Ensures button stays at bottom */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
   .info-card:hover {
     transform: translateY(-6px);
