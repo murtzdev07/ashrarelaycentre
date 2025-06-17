@@ -4,7 +4,7 @@ import { FaRegListAlt, FaUserShield, FaTshirt, FaHandsHelping, FaIdCardAlt, FaRe
 
 const Guidelines = () => {
   const guidelines = [
-    {
+    /* {
       icon: <FaTshirt />,
       title: 'Dress Code & Attendance',
       content: (
@@ -13,15 +13,16 @@ const Guidelines = () => {
           <li>Arrive Before time and attend full sessions daily.</li>
         </ul>
       ),
-    },
+    }, */
     {
       icon: <FaHandsHelping />,
       title: 'Respect & Behavior',
       content: (
         <ul>
-          <li>Maintain silence during Waaz.</li>
+          <li>Maintain silence & Switch off your Electronic Devices during Waaz.</li>
           <li>Follow volunteer instructions.</li>
           <li>Offer assistance to elders and children.</li>
+          <li>Always strive to maintain respectful and harmonious relations with people of all faiths. </li>
         </ul>
       ),
     },
