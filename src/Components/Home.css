@@ -358,5 +358,48 @@
   .card-button:hover {
     background-color: #a8872c;
   }
+.weather-section {
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.weather-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: #fff7e0;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #0a3d62;
+}
+
+.weather-desc {
+  font-size: 1rem;
+  color: #555;
+  text-transform: capitalize;
+}
 
 

@@ -17,6 +17,7 @@
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 1.5rem;
 }
 
@@ -25,10 +26,11 @@
 
 .pill-logo2 img {
   width: 100%;
-  max-width: 200px; /* controls max size */
+  max-width: 250px; /* controls max size */
   height: auto;
   object-fit: contain;
-  margin-top: 27px;
+  margin-top: 20px;
+  margin-left: -60px;
 }
 
 
@@ -150,7 +152,7 @@
   }
   .pill-logo2 img {
   max-width: 180px;
-  margin-top: 1px;
+  margin-top: 5px;
+  margin-right: 40PX ;
 }
-
 }

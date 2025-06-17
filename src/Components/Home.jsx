@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { FaBullhorn } from 'react-icons/fa';
 import { FaChevronDown, FaChevronUp ,FaMapMarkedAlt,FaPhoneAlt} from 'react-icons/fa'; // for FAQ toggles
+import axios from 'axios'; // 📦 Make sure axios is installed
 
 const faqs = [
   {
@@ -22,8 +23,11 @@ const faqs = [
   }
 ];
 
+
+
 const Home = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     const targetDate = new Date("2025-06-27T00:00:00");
@@ -47,6 +51,28 @@ const Home = () => {
 
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const apiKey = 'f3511f8915253b5609576994e5d5f12b';
+        const city = 'Ratlam';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+        const response = await axios.get(url);
+        console.log(response.data);
+        setWeather({
+          temp: response.data.main.temp,
+          desc: response.data.weather[0].description,
+          icon: response.data.weather[0].icon,
+        });
+      } catch (error) {
+        console.error("Failed to fetch weather:", error);
+      }
+    };
+
+    fetchWeather();
   }, []);
 
   const toggleFAQ = (index) => {
@@ -95,6 +121,21 @@ const Home = () => {
     <a href="/helpline" className="card-button"> Visit Helpline </a>
   </div>
 </section>
+
+{weather && (
+  <section className="weather-section">
+    <h2 className="weather-title">Current Weather - Ratlam</h2>
+    <div className="weather-card">
+      <img
+        src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+        alt={weather.desc}
+        className="weather-icon"
+      />
+      <p className="weather-temp">{weather.temp}°C</p>
+      <p className="weather-desc">{weather.desc}</p>
+    </div>
+  </section>
+)}
 
 
       {/* 🔻 FAQ Section Here */}
