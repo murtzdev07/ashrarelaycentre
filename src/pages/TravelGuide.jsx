@@ -12,19 +12,31 @@ const fares = [
   {
     from: 'Ratlam Station',
     to: 'Burhani Zone',
-    fare: '₹100 - ₹120',
+    fare: '₹70 - ₹80',
     distance: '3.4 km'
   },
   {
     from: 'Ratlam Station',
     to: 'Saifee Zone',
-    fare: '₹100 - ₹150',
+    fare: '₹80 - ₹100',
     distance: '3.7 km'
   },
   {
     from: 'Ratlam Station',
     to: 'Najmi Zone',
-    fare: '₹100 - ₹150',
+    fare: '₹80 - ₹100',
+    distance: '4.0 km'
+  },
+  {
+    from: 'Burhani Zone',
+    to: 'Kalimi Zone',
+    fare: '₹60 - ₹70',
+    distance: '4.0 km'
+  },
+  {
+    from: 'Saifee Zone',
+    to: 'Kalimi Zone',
+    fare: '₹50',
     distance: '4.0 km'
   },
   /* {
