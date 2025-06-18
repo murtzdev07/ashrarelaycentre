@@ -10,7 +10,7 @@ const KalimiZone = () => {
       </p>
 
       {/* Capacity container */}
-      <div
+     {/*  <div
         style={{
           border: '2px solid goldenrod',
           borderRadius: '10px',
@@ -26,7 +26,7 @@ const KalimiZone = () => {
         }}
       >
         Total Capacity: 3,000
-      </div>
+      </div> */}
 
       {/* Map container */}
       <div

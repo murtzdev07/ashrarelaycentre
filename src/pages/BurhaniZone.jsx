@@ -11,7 +11,7 @@ const BurhaniZone = () => {
           </p>
 
           {/* Capacity container */}
-          <div
+          {/* <div
             style={{
               border: '2px solid goldenrod',
               borderRadius: '10px',
@@ -27,7 +27,7 @@ const BurhaniZone = () => {
             }}
           >
             Total Capacity: 1,800
-          </div>
+          </div> */}
 
           {/* Map container with shadow */}
           <div
