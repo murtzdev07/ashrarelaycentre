@@ -88,3 +88,14 @@
 .email-link:hover {
   text-decoration: underline;
 }
+.phone-link {
+  color: #0a3d62;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+  color: #c19d3c;
+}
+
