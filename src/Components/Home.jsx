@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { FaBullhorn } from 'react-icons/fa';
 import { FaChevronDown, FaChevronUp ,FaMapMarkedAlt,FaPhoneAlt} from 'react-icons/fa'; // for FAQ toggles
+import axios from 'axios'; // 📦 Make sure axios is installed
 
 const faqs = [
   {
@@ -22,8 +23,11 @@ const faqs = [
   }
 ];
 
+
+
 const Home = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     const targetDate = new Date("2025-06-27T00:00:00");
@@ -47,6 +51,28 @@ const Home = () => {
 
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const apiKey = 'f3511f8915253b5609576994e5d5f12b';
+        const city = 'Ratlam';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+        const response = await axios.get(url);
+        console.log(response.data);
+        setWeather({
+          temp: response.data.main.temp, 
+          desc: response.data.weather[0].description.toLowerCase(),
+          icon: response.data.weather[0].icon,
+        });
+      } catch (error) {
+        console.error("Failed to fetch weather:", error);
+      }
+    };
+
+    fetchWeather();
   }, []);
 
   const toggleFAQ = (index) => {
@@ -96,6 +122,41 @@ const Home = () => {
   </div>
 </section>
 
+{weather && (
+  <section className="weather-section">
+    <h2 className="weather-title">Current Weather - Ratlam</h2>
+    <div className="weather-card">
+      <img
+        src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+        alt={weather.desc}
+        className="weather-icon"
+      />
+      <p className="weather-temp">{weather.temp}°C</p>
+      <p className="weather-desc" style={{ textTransform: "capitalize" }}>
+        {weather.desc}
+      </p>
+
+      {/* Weather Warning Logic */}
+      <div className="weather-warning">
+        {weather.desc.includes("rain") && (
+          <p className="warning-text">⚠️ It's raining — carry an umbrella!</p>
+        )}
+        {weather.desc.includes("thunderstorm") && (
+          <p className="warning-text">⚠️ Thunderstorms expected — stay indoors.</p>
+        )}
+        {weather.temp > 35 && (
+          <p className="warning-text">⚠️ It's very hot — stay hydrated!</p>
+        )}
+        {weather.temp < 10 && (
+          <p className="warning-text">⚠️ It's cold — Keep Yourself Warm.</p>
+        )}
+        {weather.desc.includes("clear") && (
+          <p className="warning-text">⚠️ Clear skies — have a great day!</p>
+        )}
+      </div>
+    </div>
+  </section>
+)}
 
       {/* 🔻 FAQ Section Here */}
       <section className="announcement-container">
