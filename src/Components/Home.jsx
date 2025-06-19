@@ -127,7 +127,7 @@ const Home = () => {
       <h3>Webinars</h3>
     </div>
     <p>Click here to join Important Webinars</p>
-    <a href="https://webinar.alvazarat.org" className="card-button">Join Webinar</a>
+    <a href="/" className="card-button">Join Webinar</a>
   </div>
 </section>
 
