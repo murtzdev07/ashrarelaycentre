@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { FaBullhorn } from 'react-icons/fa';
-import { FaChevronDown, FaChevronUp ,FaMapMarkedAlt,FaPhoneAlt} from 'react-icons/fa'; // for FAQ toggles
+import { FaChevronDown, FaChevronUp ,FaMapMarkedAlt,FaPhoneAlt,FaVideo} from 'react-icons/fa'; // for FAQ toggles
 import axios from 'axios'; // 📦 Make sure axios is installed
 
 const faqs = [
@@ -119,6 +119,15 @@ const Home = () => {
     </div>
     <p>Any Queries?? Just Visit Here</p>
     <a href="/helpline" className="card-button"> Visit Helpline </a>
+  </div>
+
+  <div className="info-card">
+    <div className="card-header">
+      <FaVideo className="card-icon" />
+      <h3>Webinars</h3>
+    </div>
+    <p>Click here to join Important Webinars</p>
+    <a href="https://webinar.alvazarat.org" className="card-button">Join Webinar</a>
   </div>
 </section>
 

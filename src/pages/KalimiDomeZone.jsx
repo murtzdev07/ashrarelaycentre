@@ -11,7 +11,7 @@ const KalimiDomeZone = () => {
           </p>
 
           {/* Capacity container */}
-          <div
+          {/* <div
             style={{
               border: '2px solid goldenrod',
               borderRadius: '10px',
@@ -27,7 +27,7 @@ const KalimiDomeZone = () => {
             }}
           >
             Total Capacity: 10,400
-          </div>
+          </div> */}
 
           {/* Map container with shadow */}
           <div

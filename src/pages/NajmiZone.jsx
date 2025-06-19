@@ -11,7 +11,7 @@ const NajmiZone = () => {
           </p>
 
           {/* Capacity container */}
-          <div
+          {/* <div
             style={{
               border: '2px solid goldenrod',
               borderRadius: '10px',
@@ -28,7 +28,7 @@ const NajmiZone = () => {
           >
             Total Capacity: 1,500
           </div>
-
+ */}
           {/* Map container with shadow */}
           <div
             className="map-container"
