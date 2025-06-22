@@ -31,14 +31,14 @@ const fares = [
     from: 'Burhani Zone',
     to: 'Kalimi Zone',
     fare: '₹60 - ₹70',
-    distance: '4.0 km'
+    distance: '1.6 km'
   },
   {
     from: 'Saifee Zone',
     to: 'Kalimi Zone',
     fare: '₹50',
-    distance: '4.0 km'
-  },
+    distance: '1.2 km'
+  }
   /* {
     from: 'Burhani Park',
     to: 'Madarasa Campus',
