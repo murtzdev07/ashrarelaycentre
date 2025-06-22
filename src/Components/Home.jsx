@@ -127,7 +127,7 @@ const Home = () => {
       <h3>Webinars</h3>
     </div>
     <p>Click here to join Important Webinars</p>
-    <a href="/" className="card-button">Join Webinar</a>
+    <a href="https://webinar.ratlamrelaycentre.co.in" className="card-button">Join Webinar</a>
   </div>
 </section>
 
@@ -147,7 +147,7 @@ const Home = () => {
 
       {/* Weather Warning Logic */}
       <div className="weather-warning">
-        {weather.desc.includes("rain") && (
+        {weather.desc.includes("clouds") && (
           <p className="warning-text">⚠️ It's raining — carry an umbrella!</p>
         )}
         {weather.desc.includes("thunderstorm") && (
