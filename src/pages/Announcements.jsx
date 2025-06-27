@@ -9,6 +9,41 @@ const Announcements = () => {
     message: (
       <div>
         <p>
+          For Medical Emergency Please Contact :<br/>
+<a href="tel:+919893194852" className="phone-link">+919893194852</a><br/>
+<a href="tel:+918103802518" className="phone-link">+918103802518</a>
+        </p>
+      </div>
+    ),
+    date: '26th June 2025',
+  }, 
+    {
+    title: 'Ashara Mubaraka 1447h, (Relay center-Ratlam)',
+    message: (
+      <div>
+        <p>
+          Afzalus Salam
+
+Ashara Mubaraka Ratlam Relay Centre ma Raza si Aaunar Sagla Mehmano no Ahlan Wasahlan
+Waaghad na bilad si aaaunaar mumeneen Sailana Bypass si thata huwa Banjali Airstrip si left lai Western Ring Road si Continue kri 
+Varoth Mata Mandir si left lai Sagod Road si continue krta huwa aawe  aap ne Parking Zone ma direct karwa waaste BGI 
+na khidmatguzaro yaari aapse aap sagla co-operate krso em adaban Iltemas che 
+        </p>
+      
+        <p><strong>Parking Location : 
+</strong></p>
+        <a href="https://maps.app.goo.gl/UQFjGTc6tx3KCwWU6"><p>https://maps.app.goo.gl/UQFjGTc6tx3KCwWU6</p></a>
+      
+        <p><strong>Shukran</strong></p>
+      </div>
+    ),
+    date: '26th June 2025',
+  },
+  {
+    title: 'Ashara Mubaraka 1447h, (Relay center-Ratlam)',
+    message: (
+      <div>
+        <p>
           Afzalus Salam
 
 Ashara Mubaraka Ratlam Relay Centre ma Raza si Aaunar Sagla Mehmano no Ahlan Wasahlan 
@@ -18,7 +53,7 @@ Dohad na bilad si aaaunaar mumeneen je Delhi-Mumbai Expressway si thata huwa Gan
       
         <p><strong>Parking Location : 
 </strong></p>
-        <p>https://maps.app.goo.gl/UQFjGTc6tx3KCwWU6</p>
+        <a href="https://maps.app.goo.gl/UQFjGTc6tx3KCwWU6"><p>https://maps.app.goo.gl/UQFjGTc6tx3KCwWU6</p></a>
       
         <p><strong>Shukran</strong></p>
       </div>
